@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+## Passenger Application 
 
-You can use the [editor on GitHub](https://github.com/imrankhan15/java-microservices/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This application has two microservices. 1. Passenger and Corona Checker.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Workflow:
 
-### Markdown
+1. Passenger make a check request to corona checker. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+2. If checked false, the coronachecker sends a message to passenger. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+3. Passenger then send a message of success to rabbit mq query pool. 
 
-- Bulleted
-- List
+4. Then the notification takes this message from rabbit mq pool.
 
-1. Numbered
-2. List
+here are some partial demonstration videos:
 
-**Bold** and _Italic_ and `Code` text
+1. Load Balancing:
 
-[Link](url) and ![Image](src)
-```
+It describes - if there is multiple corona checker application and only one passenger how the load is distributed between corona checker application.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+https://youtu.be/oWp9M8b-puM 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/imrankhan15/java-microservices/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+2. Zipkin:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+It describes - the timespan of multiple Microservices when making a Passenger registration. Zipkin tool is used for this visualization.
+
+https://youtu.be/xP-6NXMPMw8 
+
+
+3. Rabbit mq:
+
+when the passenger gets response from corona checker. It then send a message to rabbitmq pool. The notification microservice collect this message from rabbitmq. Rabbit mq is used for fault tolerance.
+
+
+https://youtu.be/5pjMrwFRaY8 
+
+
+4. hosting to docker hub:
+
+microservices are converted to jar file and packaged with jib and then hosted in the docker hub. Later they can be used using single docker compose file.
+
+
+https://youtu.be/ClTcLGG6D64 
