@@ -20,7 +20,7 @@ It describes - if there is multiple corona checker application and only one pass
 
 https://youtu.be/oWp9M8b-puM
 
-[![IMAGE ALT TEXT]()](https://youtu.be/oWp9M8b-puM)
+
     Zipkin:
 
 It describes - the timespan of multiple Microservices when making a Passenger registration. Zipkin tool is used for this visualization.
