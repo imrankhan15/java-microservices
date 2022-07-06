@@ -1,6 +1,6 @@
 ## Passenger Application 
 
-This application has two microservices. 1. Passenger and Corona Checker.
+This application has two microservices.  Passenger and Corona Checker.
 
 Workflow:
 
@@ -44,3 +44,6 @@ microservices are converted to jar file and packaged with jib and then hosted in
 
 
 https://youtu.be/ClTcLGG6D64 
+
+
+** the project idea is learned using www.amigoscode.com
