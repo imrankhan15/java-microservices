@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>notification</artifactId>
+    <artifactId>coronachecker</artifactId>
 
     <build>
         <plugins>
@@ -19,6 +19,7 @@
             </plugin>
         </plugins>
     </build>
+
     <profiles>
         <profile>
             <id>build-docker-image</id>
@@ -32,7 +33,6 @@
             </build>
         </profile>
     </profiles>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,13 +43,13 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
