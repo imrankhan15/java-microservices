@@ -42,4 +42,4 @@ microservices are converted to jar file and packaged with jib and then hosted in
 https://youtu.be/ClTcLGG6D64
 
 
-** the project idea is learned using www.amigoscode.com
+** the project idea is learned using www.amigoscode.com . Special thanks to University of Bamberg, where I have learnt the basics of these technologies.
